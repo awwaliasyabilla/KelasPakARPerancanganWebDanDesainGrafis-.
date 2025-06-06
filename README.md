@@ -81,9 +81,3 @@
 * Struktur frontend/backend
 * API endpoint (POST /register, GET /jadwal)
 * Langkah deploy ke Netlify + Railway
-
----
-
-Jika kamu butuh file presentasi (.pptx) atau README yang bisa langsung diupload ke GitHub, tinggal minta saja!
-
-iya saya butuh
