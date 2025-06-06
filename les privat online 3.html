@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les Privat Online</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <!-- Hero Section -->
+  <section class="bg-blue-600 text-white p-10 text-center">
+    <h1 class="text-4xl font-bold mb-4">Belajar Lebih Mudah dengan Les Privat Online</h1>
+    <p class="mb-6">Temukan tutor terbaik kapan saja, di mana saja!</p>
+    <a href="#cari" class="bg-white text-blue-600 px-6 py-2 rounded-full font-semibold">Mulai Belajar Sekarang</a>
+  </section>
+
+  <!-- Pencarian Cepat Tutor -->
+  <section id="cari" class="p-6 max-w-xl mx-auto">
+    <h2 class="text-2xl font-semibold mb-4 text-center">Cari Tutor</h2>
+    <input type="text" placeholder="Cari berdasarkan nama atau mata pelajaran..." class="w-full px-4 py-2 border border-gray-300 rounded-md">
+  </section>
+
+  <!-- Dashboard Siswa -->
+  <section class="p-6 max-w-4xl mx-auto">
+    <h2 class="text-xl font-semibold mb-2">Dashboard Siswa</h2>
+    <div class="bg-white shadow p-4 rounded">
+      <p><strong>Jadwal Les:</strong> Matematika - Senin, 16.00 WIB</p>
+      <p><strong>Status:</strong> Aktif</p>
+      <p><strong>Pesan ke Tutor:</strong> <button class="text-blue-500 underline">Kirim Pesan</button></p>
+    </div>
+  </section>
+
+  <!-- Dashboard Tutor -->
+  <section class="p-6 max-w-4xl mx-auto">
+    <h2 class="text-xl font-semibold mb-2">Dashboard Tutor</h2>
+    <div class="bg-white shadow p-4 rounded">
+      <p><strong>Permintaan Mengajar:</strong> 3</p>
+      <p><strong>Jadwal:</strong> Matematika - Senin, 16.00 WIB</p>
+      <p><strong>Saldo:</strong> Rp. 250.000</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 text-center py-4 mt-10">
+    <p>&copy; 2025 Les Privat Online. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+<!-- register.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar | Les Privat Online</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+  <div class="w-full max-w-md bg-white p-8 rounded shadow-md">
+    <h2 class="text-2xl font-bold mb-6 text-center">Buat Akun Baru</h2>
+    
+    <form id="registerForm" class="space-y-4">
+      <div>
+        <label for="name" class="block text-sm font-medium text-gray-700">Nama Lengkap</label>
+        <input type="text" id="name" name="name" required
+               class="w-full border border-gray-300 p-2 rounded mt-1">
+      </div>
+
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+        <input type="email" id="email" name="email" required
+               class="w-full border border-gray-300 p-2 rounded mt-1">
+      </div>
+      
+      <div>
+        <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+        <input type="password" id="password" name="password" required
+               class="w-full border border-gray-300 p-2 rounded mt-1">
+      </div>
+
+      <div>
+        <label for="role" class="block text-sm font-medium text-gray-700">Daftar sebagai</label>
+        <select id="role" name="role" class="w-full border border-gray-300 p-2 rounded mt-1">
+          <option value="siswa">Siswa</option>
+          <option value="tutor">Tutor</option>
+        </select>
+      </div>
+      
+      <button type="submit"
+              class="w-full bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700">
+        Daftar
+      </button>
+    </form>
+
+    <p class="text-center text-sm mt-4">
+      Sudah punya akun? <a href="login.html" class="text-blue-600 hover:underline">Login di sini</a>
+    </p>
+  </div>
+
+  <script>
+    document.getElementById('registerForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const role = document.getElementById('role').value;
+
+      console.log("Register:", { name, email, password, role });
+      alert(`Pendaftaran berhasil sebagai ${role} (simulasi).`);
+    });
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Booking Les | Les Privat Online</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+
+  <div class="max-w-xl mx-auto bg-white p-6 rounded shadow">
+    <h2 class="text-2xl font-bold mb-4 text-center">Booking Les Privat</h2>
+    
+    <form id="bookingForm" class="space-y-4">
+      <!-- Pilih Tutor -->
+      <div>
+        <label for="tutor" class="block font-medium mb-1">Pilih Tutor</label>
+        <select id="tutor" name="tutor" class="w-full border border-gray-300 p-2 rounded" required>
+          <option value="">-- Pilih Tutor --</option>
+          <option value="tutor1">Ani, Matematika</option>
+          <option value="tutor2">Budi, Bahasa Inggris</option>
+          <option value="tutor3">Cici, Fisika</option>
+        </select>
+      </div>
+
+      <!-- Pilih Tanggal -->
+      <div>
+        <label for="date" class="block font-medium mb-1">Tanggal Les</label>
+        <input type="date" id="date" name="date" class="w-full border border-gray-300 p-2 rounded" required />
+      </div>
+
+      <!-- Pilih Jam -->
+      <div>
+        <label for="time" class="block font-medium mb-1">Jam Les</label>
+        <select id="time" name="time" class="w-full border border-gray-300 p-2 rounded" required>
+          <option value="">-- Pilih Jam --</option>
+          <option value="08:00">08:00 - 09:00</option>
+          <option value="10:00">10:00 - 11:00</option>
+          <option value="14:00">14:00 - 15:00</option>
+          <option value="16:00">16:00 - 17:00</option>
+        </select>
+      </div>
+
+      <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
+        Booking Sekarang
+      </button>
+    </form>
+
+    <div id="message" class="mt-4 text-center"></div>
+  </div>
+
+  <script>
+    const bookingForm = document.getElementById('bookingForm');
+    const message = document.getElementById('message');
+
+    bookingForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Ambil data form
+      const tutor = bookingForm.tutor.value;
+      const date = bookingForm.date.value;
+      const time = bookingForm.time.value;
+
+      if (!tutor || !date || !time) {
+        message.textContent = "Harap isi semua data dengan benar.";
+        message.className = "text-red-600 mt-4";
+        return;
+      }
+
+      // Simulasi cek ketersediaan (bisa diganti cek ke backend)
+      // Misalnya waktu "10:00" pada tutor "tutor1" sudah penuh, contoh:
+      if (tutor === "tutor1" && time === "10:00") {
+        message.textContent = "Maaf, tutor tersebut sudah penuh di jam yang dipilih.";
+        message.className = "text-red-600 mt-4";
+        return;
+      }
+
+      // Simulasi berhasil booking
+      message.textContent = `Booking berhasil dengan tutor ${tutor} pada tanggal ${date} jam ${time}`;
+      message.className = "text-green-600 mt-4";
+
+      // Reset form
+      bookingForm.reset();
+    });
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard | Les Privat Online</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+
+  <div class="max-w-4xl mx-auto bg-white p-6 rounded shadow">
+    <h1 class="text-3xl font-bold mb-6 text-center">Dashboard Les Privat</h1>
+
+    <!-- Simulasi role login -->
+    <label for="role" class="block mb-2 font-semibold">Pilih Role Anda:</label>
+    <select id="role" class="border border-gray-300 rounded p-2 mb-6 w-full max-w-xs">
+      <option value="">-- Pilih Role --</option>
+      <option value="siswa">Siswa</option>
+      <option value="tutor">Tutor</option>
+    </select>
+
+    <!-- Konten dashboard akan muncul di sini -->
+    <div id="dashboardContent"></div>
+  </div>
+
+  <script>
+    const roleSelect = document.getElementById('role');
+    const dashboardContent = document.getElementById('dashboardContent');
+
+    roleSelect.addEventListener('change', () => {
+      const role = roleSelect.value;
+      if (role === 'siswa') {
+        dashboardContent.innerHTML = `
+          <h2 class="text-xl font-semibold mb-4">Halo, Siswa!</h2>
+          <h3 class="font-semibold mt-4">Daftar Jadwal Les</h3>
+          <ul class="list-disc list-inside">
+            <li>Matematika - 10 Juni 2025, 14:00 - 15:00</li>
+            <li>Bahasa Inggris - 12 Juni 2025, 16:00 - 17:00</li>
+          </ul>
+          <h3 class="font-semibold mt-4">Status Les</h3>
+          <p>Semua les Anda sudah dijadwalkan dengan tutor.</p>
+          <h3 class="font-semibold mt-4">Pesan dari Tutor</h3>
+          <p>"Jangan lupa persiapkan materi bab 3 minggu depan."</p>
+        `;
+      } else if (role === 'tutor') {
+        dashboardContent.innerHTML = `
+          <h2 class="text-xl font-semibold mb-4">Halo, Tutor!</h2>
+          <h3 class="font-semibold mt-4">Permintaan Mengajar</h3>
+          <ul class="list-disc list-inside">
+            <li>Permintaan dari Siswa A - Matematika, 10 Juni 2025, 14:00</li>
+            <li>Permintaan dari Siswa B - Fisika, 11 Juni 2025, 15:00</li>
+          </ul>
+          <h3 class="font-semibold mt-4">Jadwal Mengajar</h3>
+          <ul class="list-disc list-inside">
+            <li>Matematika - 10 Juni 2025, 14:00 - 15:00</li>
+            <li>Bahasa Inggris - 12 Juni 2025, 16:00 - 17:00</li>
+          </ul>
+          <h3 class="font-semibold mt-4">Saldo Anda</h3>
+          <p>Rp 1.500.000,-</p>
+        `;
+      } else {
+        dashboardContent.innerHTML = '<p class="text-red-600">Silakan pilih role untuk melihat dashboard.</p>';
+      }
+    });
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard Les Privat Online</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    #container { display: flex; gap: 20px; }
+    #video, #chat { border: 1px solid #ccc; border-radius: 5px; padding: 10px; }
+    #video { flex: 2; height: 500px; }
+    #chat { flex: 1; display: flex; flex-direction: column; height: 500px; }
+    #chat-box {
+      flex: 1;
+      overflow-y: auto;
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin-bottom: 10px;
+      background: #f9f9f9;
+    }
+    #chat-input {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+    #send-btn {
+      margin-top: 5px;
+      padding: 10px;
+      width: 100%;
+      background: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    #send-btn:hover { background: #0056b3; }
+  </style>
+</head>
+<body>
+
+  <h1>Dashboard Les Privat Online</h1>
+  <p>Selamat datang, <span id="user-name"></span></p>
+
+  <div id="container">
+    <div id="video"></div>
+
+    <div id="chat">
+      <div id="chat-box"></div>
+      <input type="text" id="chat-input" placeholder="Tulis pesan..." />
+      <button id="send-btn">Kirim</button>
+    </div>
+  </div>
+
+  <!-- Jitsi Meet External API -->
+  <script src="https://meet.jit.si/external_api.js"></script>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+  <script>
+    // ----- SETUP NAMA USER -----
+    let userName = prompt("Masukkan nama Anda (Tutor/Siswa):");
+    if (!userName) userName = "Guest";
+    document.getElementById('user-name').textContent = userName;
+
+    // ----- JITSI MEET -----
+    const domain = "meet.jit.si";
+    const options = {
+      roomName: "LesPrivatRoom123",  // Bisa dinamis berdasarkan sesi
+      width: '100%',
+      height: 500,
+      parentNode: document.querySelector('#video'),
+      userInfo: {
+        displayName: userName
+      }
+    };
+    const api = new JitsiMeetExternalAPI(domain, options);
+
+    // ----- FIREBASE CONFIG (GANTI DENGAN MILIK ANDA) -----
+    const firebaseConfig = {
+      apiKey: "API_KEY",
+      authDomain: "PROJECT_ID.firebaseapp.com",
+      databaseURL: "https://PROJECT_ID.firebaseio.com",
+      projectId: "PROJECT_ID",
+      storageBucket: "PROJECT_ID.appspot.com",
+      messagingSenderId: "SENDER_ID",
+      appId: "APP_ID"
+    };
+
+    // Inisialisasi Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+
+    // ----- CHAT REAL-TIME -----
+    const chatBox = document.getElementById('chat-box');
+    const chatInput = document.getElementById('chat-input');
+    const sendBtn = document.getElementById('send-btn');
+
+    // Kirim pesan ke Firebase
+    sendBtn.onclick = () => {
+      const message = chatInput.value.trim();
+      if (message !== '') {
+        db.ref('chat/lesprivat').push({
+          user: userName,
+          message: message,
+          timestamp: Date.now()
+        });
+        chatInput.value = '';
+      }
+    };
+
+    // Listen pesan baru realtime
+    db.ref('chat/lesprivat').on('child_added', snapshot => {
+      const data = snapshot.val();
+      const time = new Date(data.timestamp).toLocaleTimeString();
+      const p = document.createElement('p');
+      p.innerHTML = `<strong>${data.user}</strong> [${time}]: ${data.message}`;
+      chatBox.appendChild(p);
+      chatBox.scrollTop = chatBox.scrollHeight;
+    });
+  </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Booking Les Privat Online</title>
+</head>
+<body>
+  <h2>Booking Les Privat Online</h2>
+  <form id="bookingForm">
+    <label for="student">Nama Siswa:</label>
+    <input type="text" id="student" required />
+
+    <label for="tutor">Pilih Tutor:</label>
+    <select id="tutor" required>
+      <option value="" disabled selected>-- Pilih Tutor --</option>
+      <option value="Budi Santoso">Budi Santoso</option>
+      <option value="Sari Dewi">Sari Dewi</option>
+      <option value="Andi Wijaya">Andi Wijaya</option>
+    </select>
+
+    <label for="date">Tanggal Les:</label>
+    <input type="date" id="date" required />
+
+    <label for="time">Jam Les:</label>
+    <select id="time" required>
+      <option value="" disabled selected>-- Pilih Jam --</option>
+      <option value="08:00">08:00 - 09:00</option>
+      <option value="09:00">09:00 - 10:00</option>
+      <option value="10:00">10:00 - 11:00</option>
+      <option value="11:00">11:00 - 12:00</option>
+      <option value="13:00">13:00 - 14:00</option>
+      <option value="14:00">14:00 - 15:00</option>
+      <option value="15:00">15:00 - 16:00</option>
+    </select>
+
+    <button type="submit">Booking Sekarang</button>
+  </form>
+
+  <div id="message"></div>
+
+  <script>
+    const form = document.getElementById('bookingForm');
+    const messageDiv = document.getElementById('message');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const student = document.getElementById('student').value;
+      const tutor = document.getElementById('tutor').value;
+      const date = document.getElementById('date').value;
+      const time = document.getElementById('time').value;
+
+      if(!student || !tutor || !date || !time) {
+        messageDiv.textContent = 'Semua field harus diisi!';
+        messageDiv.style.color = 'red';
+        return;
+      }
+
+      try {
+        const response = await fetch('http://localhost:5000/api/bookings', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ student, tutor, date, time })
+        });
+
+        const data = await response.json();
+        if(response.ok) {
+          messageDiv.textContent = data.message;
+          messageDiv.style.color = 'green';
+          form.reset();
+        } else {
+          messageDiv.textContent = data.message || 'Error booking';
+          messageDiv.style.color = 'red';
+        }
+      } catch(err) {
+        messageDiv.textContent = 'Gagal terhubung ke server';
+        messageDiv.style.color = 'red';
+      }
+    });
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Video Conference Les Privat</title>
+  <script src='https://meet.jit.si/external_api.js'></script>
+  <style>
+    #meet { width: 800px; height: 600px; margin: auto; }
+  </style>
+</head>
+<body>
+
+<h2>Video Conference dengan Tutor</h2>
+<div id="meet"></div>
+
+<script>
+  // Inisialisasi Jitsi Meet API
+  const domain = 'meet.jit.si';
+  const options = {
+    roomName: 'LesPrivatOnlineRoom123',
+    width: 800,
+    height: 600,
+    parentNode: document.querySelector('#meet'),
+    interfaceConfigOverwrite: {
+      SHOW_JITSI_WATERMARK: false,
+      SHOW_WATERMARK_FOR_GUESTS: false
+    }
+  };
+  const api = new JitsiMeetExternalAPI(domain, options);
+</script>
+
+</body>
+</html>
