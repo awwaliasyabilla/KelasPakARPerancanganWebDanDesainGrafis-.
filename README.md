@@ -1,6 +1,8 @@
 # Kelas-PakAR-PerancanganWebDanDesainGrafis
 
 ## Landing Page: wonton.apa
+NAMA : AWWALIA RACHMA SYABILLA
+NIM : 23110310013
 
 Website landing page sederhana untuk produk kuliner "Mie Ayam Bangka" yang menampilkan:
 
@@ -18,5 +20,9 @@ Website landing page sederhana untuk produk kuliner "Mie Ayam Bangka" yang menam
 5. Menambahkan tombol "Hubungi Kami" ke WhatsApp.
 6. Mengambil screenshot tampilan website.
 7. Mengupload ke GitHub dan platform hosting
+
+## 📸 Screenshot Tampilan
+![Screenshot Website](Screenshotwonton01.png)
+
 
 
