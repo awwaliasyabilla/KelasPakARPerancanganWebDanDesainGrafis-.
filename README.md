@@ -21,8 +21,8 @@ Website landing page sederhana untuk produk kuliner "Mie Ayam Bangka" yang menam
 
 ## Screenshot
 
-![Tampilan Website](screenshot.png)
+![Tampilan Website](Screenshotwonton.png)
 
 ## Hosting
 
-Web ini dapat diakses melalui: [Link Hosting](https://namapengguna.github.io/Kelas-PakAR-PerancanganWebDanDesainGrafis) *(ubah sesuai domain kamu di GitHub Pages / Netlify / Vercel)*
+Web ini dapat diakses melalui: [Link Hosting](https://https://wontonawwa.bisdig23.com/.github.io/Kelas-PakAR-PerancanganWebDanDesainGrafis) 
