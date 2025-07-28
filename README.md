@@ -1,42 +1,28 @@
-link website : file:///C:/xampp/htdocs/xampp/les%20private%20online%203/les%20privat%20online%203.html
+# Kelas-PakAR-PerancanganWebDanDesainGrafis
 
-# Presentasi Proyek: Platform Les Privat Online
+## Landing Page: wonton.apa
 
-## 1. Latar Belakang & Masalah
+Website landing page sederhana untuk produk kuliner "Mie Ayam Bangka" yang menampilkan:
 
-* Banyak siswa kesulitan menemukan tutor privat berkualitas.
-* Belajar offline terbatas oleh lokasi dan waktu.
-* Proses pemesanan les masih manual dan tidak efisien.
+- Nama produk dan deskripsi
+- Gambar produk
+- Tombol Hubungi Kami (via WhatsApp)
+- Desain responsif menggunakan HTML dan CSS
 
-## 2. Solusi: Platform Les Privat Online
+## Proses Pengerjaan
 
-* Website/aplikasi untuk mempertemukan siswa dan tutor secara online.
-* Fitur booking jadwal fleksibel.
-* Integrasi video call (Zoom/Jitsi) dan chat realtime (Firebase).
-* Dashboard terpisah untuk siswa dan tutor.
+1. Membuat struktur folder proyek.
+2. Membuat file HTML dengan struktur semantik (`header`, `section`, `footer`).
+3. Mendesain tampilan menggunakan CSS sederhana dan responsif.
+4. Menyertakan gambar mie ayam ke dalam folder `images/`.
+5. Menambahkan tombol "Hubungi Kami" ke WhatsApp.
+6. Mengambil screenshot tampilan website.
+7. Mengupload ke GitHub dan platform hosting
 
-## 3. Demo Singkat
+## Screenshot
 
-* Homepage → Cari tutor
-* Registrasi & Login (Siswa & Tutor)
-* Dashboard Siswa → Booking Les
-* Dashboard Tutor → Terima/Menolak Jadwal
-* Video Conference + Chat Realtime
-* Admin Panel
+![Tampilan Website](screenshot.png)
 
-## 4. Dokumentasi GitHub
+## Hosting
 
-### Repo: `Kelas-PakAR-PerancanganWebDanDesainGrafis`
-
-**README.md:**
-
-* Deskripsi proyek
-* Fitur utama
-* Link demo
-* Struktur folder
-
-**docs/**
-
-* User Manual: Cara daftar, booking, chat
-* Panduan login, dashboard, jadwal
-
+Web ini dapat diakses melalui: [Link Hosting](https://namapengguna.github.io/Kelas-PakAR-PerancanganWebDanDesainGrafis) *(ubah sesuai domain kamu di GitHub Pages / Netlify / Vercel)*
